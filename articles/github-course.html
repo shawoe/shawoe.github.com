@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<meta name="author" content="Shawoe" />
+	<meta name="description" content="Shawoe : This is my personal blog." />
+	<meta name="robots" content="all" />
+	
+	<title>Shawoe： 博客主页</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css" />
+</head>
+
+<body id="github-course">
+<!-- WRAPPER -->
+<div class="wrapper">
+
+	<!-- HEADER -->
+	<header class="header">
+		<h1>Shawoe</h1>
+		<nav class="navigation">
+			<ul><li><a href="#">主页</a></li>
+				<li><a href="#">简介</a>
+					<ul><li><a href="#">1111</a></li>
+						<li><a href="#">2222</a></li>
+						<li><a href="#">3333</a></li>
+						<li><a href="#">4444</a></li>
+					</ul>
+				</li>
+				<li><a href="#">原创</a>
+					<ul><li><a href="#">5555</a></li>
+						<li><a href="#">6666</a></li>
+						<li><a href="#">7777</a></li>
+						<li><a href="#">8888</a></li>
+						<li><a href="#">9999</a></li>
+						<li><a href="#">0000</a></li>
+					</ul>
+				</li>
+				<li><a href="#">前端</a>
+					<ul><li><a href="#">HTML 5</a></li>
+						<li><a href="#">CSS 3</a></li>
+						<li><a href="#">JavaScript</a></li>
+						<li><a href="#">Web Design</a></li>
+					</ul>
+				</li>
+				<li><a href="#">后端</a>
+					<ul><li><a href="#">Java EE</a></li>
+						<li><a href="#">Struts 2</a></li>
+						<li><a href="#">Hibernate</a></li>
+						<li><a href="#">Spring 3</a></li>
+					</ul>
+				</li>
+			</ul>
+		<nav>
+	<!-- END HEADER -->
+	</header>
+	
+	<!-- CONTENT -->
+	<div class="content">
+	
+		<!-- FIRST ARTICLE -->	
+		<article class="first">
+			<header class="title">
+				<h2><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></h2>
+				<address class="author">
+					<ul><li>作者：肖艺</li>
+						<li>联系方式：<a href="mailto:shawoe@163.com">shawoe@163.com</a></li>
+					</ul>
+				</address>
+			</header>
+			<section>
+			<h3>大家一直在聊的 GitHub Pages 是什么？</h3>
+			<p>如果你对编程有所了解，就一定听说过GitHub。它号称程序员的Facebook，有着极高的人气，许多重要的开源项目都托管在上面。简单说，它是一个具有版本管理功能的代码仓库，而且每个项目都有一个主页，列出项目的源文件。</p>
+			<p>但是对于一个新手来说，看到一大堆源码，只会让人头晕脑涨，不知何处入手。他更希望看到的是，一个简明易懂的网页，说明每一步应该怎么做。因此，GitHub就设计了Pages功能，允许用户自定义项目首页，用来替代默认的源码列表。所以，GitHub Pages可以被认为是用户编写的、托管在GitHub.com上的静态网页。</p>
+			<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-15-29.440Z.png" />
+			<p>而GitHub for Windows则是Windows上的客户端软件，用于本地仓库和远程仓库的同步。当然了，在介绍使用之前还得先啰嗦上几句：</p>
+			<p>这是我在GitHub上写的第一篇博文，怀着非常忐忑的心情，毕竟是如此高大上的代码托管仓库，要写好真心不容易。查看网上其他GitHub指导性博客时，着实发现大部分的操作都已经跟不上GitHub当前版本了，这样让很多人使用GitHub带来了不便。于是便萌生了重新整理《GitHub：入门指南》的想法。但毕竟本人水平有限（甚至毫不夸张的说还只是刚刚入门的水平），文中有任何不当之处请读者谅解并指出。毫无疑问，随着时间的推移这篇博文也终将不适应新版本的GirHub，但我想至少在当下还是具有一定参考价值的。</p>
+			<p>需要注意的是，这篇博文并非完全本人原创，它是针对GitHub Pages和GitHub for Windows两个常用工具，并参考另外两位技术大牛的博文整理而成，最终以“迭代”这一互联网最传奇的方式将此文用GitHub for Windows上传至GitHub Pages。文中部分摘抄内容如有冒犯原作者之处希望谅解并联系本人及时删改。下面是我参考的两篇博文：</p>
+			<ul>
+				<li><a href="http://www.cr173.com/html/15618_1.html">http://www.cr173.com/html/15618_1.html</a></li>
+				<li><a href="http://blog.csdn.net/renfufei/article/details/37725057">http://blog.csdn.net/renfufei/article/details/37725057</a></li>
+			</ul>
+			</section>
+			<section>
+			<p>接下来，我们一起来试着使用GitHub Pages服务并安装GitHub for Windows。</p>
+			<ol id="step">
+				<li>注册账号</li>
+				<p>首先，进入GitHub主页，地址:<a href="https://github.com">https://github.com</a>在右侧输入账号、邮箱、密码，然后点击注册按钮。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-19-16.271Z.png" />
+				<li>初始设置</li>
+				<p>注册完成后,选择Free免费账号完成设置。（如果要求填写银行卡号，留空即可。）</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-26-35.124Z.png" />
+				<li>验证邮箱</li>
+				<p>请打开你的邮箱，查看发送给你的确认邮件，你需要验证邮箱后，后面生成的个人主页才会被接受和发布。打开确认邮件中的地址，点击你的邮箱“confirm”，验证成功后再次进入GitHub主页：<a href="https://github.com">https://github.com</a>如果你成功看到如下页面，说明你已经注册成功了。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-29-07.276Z.png" />
+				<li>创建仓库</li>
+				<p>经过上面的步骤，你的GitHub主页地址是:<a href="https://github.com/shawoe">https://github.com/shawoe</a>这个仓库的名字是和你的账号对应的，比如我的是：<a href="https://shawoe.github.io">https://shawoe.github.io</a> 然后在GitHub主页点击右下角的创建仓库（即：+New repository），输入基本信息，然后再次点击创建仓库。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-33-10.166Z.png" />
+				<li>进入项目设置页面</li>
+				<p>因为这个项目就是专门的放页面的，所以你会看到banch:master，这便是你的默认分支，能显示你的文件和代码。后面的步骤会告诉你如何创建 gh-pages 分支。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-33-57.842Z.png" />
+				<li>进入自动页面生成器</li>
+				<p>在设置页面，下拉到底部，默认分支(master)不用管，稍后我们会修改它。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-35-07.258Z.png" />
+				<li>创建用户页面</li>
+				<p>输入一些内容，可以自己编辑，也可以从readme加载，当然你也可以跳过这一步。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-36-29.643Z.png" />
+				<li>继续，选择主题</li>
+				<p>在设置页面，下拉到底部，默认已经写好的主页代码可以不用管，当然你也可以自己去写（如果你不累的话），点击继续。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-37-04.742Z.png" />
+				<li>选择主题然后发布</li>
+				<p>如下图所示，其实这些以后你都可以自己修改替换，这只是生成一些css，html，img到你的仓库里面。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-38-55.418Z.png" />
+				<li>查看效果</li>
+				<p>现在，你可以访问自己的GitHub主页了，地址是：<a href="https://shawoe.github.io/shawoe">https://shawoe.github.io/shawoe</a>注意，地址开头那个是你的用户名，末尾那个是你的仓库名。再举一个例子，我在GitHub上的电子简历页面地址是：<a href="https://shawoe.github.com/resume">https://shawoe.github.com/resume</a>总之，以此类推吧，刚刚创建的GitHub Pages效果如下图所示:</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-15-29.440Z.png" />
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-44-25.445Z.png" />
+				<li>设置默认分支</li>
+				<p>到这里GitHub Pages就已经创建完成了，不过为了更方便下面的操作，最好还是修改一下默认分支。如下图所示，重新打开Setting后将默认分支设置为gh-pages：</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-23T15-33-57.842Z.png" />
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-24T12-43-36.456Z.png" />
+				<li>下载GitHub客户端</li>
+				<p>对于习惯Windows图形界面的程序员来讲，GitHub的使用是需要点时间和耐心的，然而最近GitHub发布了GitHub for Windows 则大大降低了学习成本和使用难度，他甚至比SVN都简单，好吧，你不信，我们来一步一步过一面：</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-24T05-16-48.900Z.png" />
+				<li>安装GitHub客户端</li>
+				<p> 首先我们需要下载GitHubSetup，进入下面的地址：<a href="https://windows.github.com">https://windows.github.com</a>点击下载GitHub for Windows，然后安装就不说了，因为是在线安装需要比较长的时间请耐心等待，进入安装界面后凭你的直觉点下一步就好了。</p>
+				<li>登陆GitHub客户端</li>
+				<p> 安装好后打开GitHub，用你的GitHub账号登陆。需要注意的事，GitHub for Windows会帮你创建SSH Key，你打开邮件应该会收到邮件帮你创建SSH Key的信息，这也省了不少事：</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_20140924133701.png" /><li>复制仓库</li>
+				<p>点击左上角的那个大大的加号按钮，选择右边的"Clone"将之前在GitHub上面创建的仓库复制到本地。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_20140924165040.png" />
+				<li>创建仓库</li>
+				<p>当然了，你也可以直接创建一个新的仓库，输入相关信息：</p>
+				<p>但是要注意，新创建的仓库应重复上面的5-11步给新仓库创建gh-pages分支。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_20140924133835.png" />
+				<li>公布仓库</li>
+				<p>这个时候我们就可以Publish一个仓库了（如果是Clone的仓库请跳过此步骤），Publish之后按钮就变成sync文字，表示以后的修改提交就是同步，这个时候你到你的GitHub上看应该就会多一个仓库了：</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_20140924211107.png" />
+				<img class="illustration" src="../illustrations/Shawoe_Blog_20140924211411.png" />
+				<li>添加项目</li>
+				<p>仓库在本地保存在一个文件夹中，GitHub for Windows会监视这个文件夹，任何修改都会在仓库中看到，我们可以把编写好的物业或者源代码放入这个文件夹下，当然，你直接在文件夹下编辑文本也是可行的。</p>
+				<li>提交注释到本地仓库</li>
+				<p>将修改提交到本地仓库，回到GitHub for Windows中，已经可以看到右侧有你刚才添加的项目了，那么在中间“Uncommitted change”填写摘要和注释，目的只是记录一下你做了哪些操作：</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_20140924134410.png" />
+				<li>将本地仓库提交</li>
+				<p>最后，点击"sync"将本地仓库同步提交到GitHub。</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_20140924134553.png" />
+				<li>在Github上查看你的项目</li>
+				<p>如下图所示，打开后你将看到成功开源了的项目：</p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_20140924143820.png" />
+				<li>参与开源项目协同开发</li>
+				<p>要知道GitHub现在已经深度支持Windows开发者了，现在每个在GitHub的开源项目右下角都有一个“Clone in Desktop”的按钮，我们可以Clone任何我们感兴趣的开源项目，然后在本地进行修改，参与开源项目的开发。点击该按钮之后，浏览器会要求打开GitHub for Windows，并下载项目至本地，新建一个本地仓库。比如说下面就是一个我暑期写的轻量级Java EE开源应用，我们可以将它Clone至本地：<a href="https://github.com/shawoe/javaweb">https://github.com/shawoe/javaweb</a></p>
+				<img class="illustration" src="../illustrations/Shawoe_Blog_2014-09-24T08-35-05.690Z.png" />
+			</ol>
+			<h3>结语：</h3>
+			<p>好了，GitHub的使用指南就到这里。毕竟水平有限，文中难免有一些错误或不妥之处，欢迎读者指出我将尽力改正。期待则我们共同的进步。更多技术文章请访问我的博客：<a href="https://shawoe.github.com/blog">http://shawoe.net</a>当然了，你也可以直接访问我的GitHub主页查看我的开源项目：<a href="https://github.com/shawoe">https://github.com/shawoe</a></p>
+			</section>
+		<!-- END FIRST ARTICLE -->
+		</article>
+		
+	<!-- END CONTENT -->
+	</div>
+		
+	<!-- SDIEBAR -->
+	<aside class="sidebar">
+	
+		<!-- ADDRESS -->
+		<address class="resume">
+			<h3><a href="http://resume.shawoe.net">作者简介</a></h3>
+			<ul><li>中文名：肖艺</li>
+				<li>英文名：Shawoe</li>
+				<li>在读院校：山东财经大学</li>
+				<li>联系方式：<a href="mailto:shawoe@163.com">shawoe@163.com</a></li>
+				<li>个人主页：<a href="http://shawoe.net">Shawoe.net</a></li>
+			</ul>
+		<!-- END ADDRESS -->
+		</address>
+		
+		<!-- BLOG -->
+		<div class="blog">
+			<h3><a href="http://shawoe.net">原创博文</a></h3>
+			<section>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+					<li>
+					<li>
+				</ol>	
+			</section>
+		<!-- END BLOG -->
+		</div>
+
+		<!-- FAVORITE -->
+		<div class="favorite">
+			<h3><a href="http://shawoe.net">收藏站点</a></h3>
+			<section>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+					<li>
+					<li>
+				</ol>	
+			</section>
+		<!-- END FAVORITE -->
+		</div>
+	
+	<!-- END SDIEBAR -->
+	</aside>
+		
+	<!-- MANUAL -->
+	<div class="manual">
+		<h3><a href="http://shawoe.net">技术手册</a></h3>
+	
+		<!-- FRONT SECTION -->
+		<div class="front">
+			<section>
+				<h4>HTML 5</h4>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+				</ol>
+			</section>
+			<section>
+				<h4>CSS 3</h4>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+				</ol>
+			</section>
+			<section>
+				<h4>JavaScript</h4>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+				</ol>
+			</section>
+			<section>
+				<h4>Web Design</h4>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+				</ol>
+			</section>
+		<!-- END FRONT MANUAL -->
+		</div>		
+
+		<!-- BACK MANUAL -->
+		<div class="back">
+			<section>
+				<h4>Java EE</h4>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+				</ol>
+			</section>
+			<section>
+				<h4>Struts 2</h4>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+				</ol>
+			</section>
+			<section>
+				<h4>Hibernate</h4>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+				</ol>
+			</section>
+			<section>
+				<h4>Spring 3</h4>
+				<ol><li><a href="http://shawoe.net/articles/github-course.html">GitHub：使用指南</a></li>
+					<li>
+				</ol>
+			</section>
+		<!-- END BACK MANUAL -->
+		</div>
+	
+	<!-- END MANUAL -->
+	</div>
+
+	<!-- FOOTER -->
+	<footer class="footer">
+		<ul><li>作者：肖艺</li>
+			<li>在读院校：山东财经大学</li>
+			<li>联系方式：<a href="mailto:shawoe@163.com">shawoe@163.com</a></li>
+			<li>博客主页：<a href="http://shawoe.net">Shawoe.net</a></li>
+		</ul>
+	<!-- END FOOTER -->
+	</footer>
+	
+<!-- END WRAPPER -->
+</div>
+</body>
+</html>

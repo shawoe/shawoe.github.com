@@ -1,8 +1,6 @@
-shawoe.github.com
+Shawoe.net
 =================
 
-This is my github homepage.
+This is my GitHub Homepage.
 
-http://github.shawoe.net
-
-https://shawoe.github.com
+http://shawoe.net
