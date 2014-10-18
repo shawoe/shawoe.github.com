@@ -1,6 +1,6 @@
 Shawoe.net
 =================
 
-This is my GitHub Homepage.
+GitHub 博客主页 （Personal Blog & GitHub Homepage）
 
 http://shawoe.net
