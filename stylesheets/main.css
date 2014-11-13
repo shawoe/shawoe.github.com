@@ -1,0 +1,293 @@
+/* ----------------------------------------------------------------
+--- @group global reset -------------------------------------------
+----------------------------------------------------------------- */
+
+* {
+    padding: 0;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","微软雅黑";
+    font-size: 1.25em;
+    color: #444;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* ----------------------------------------------------------------
+--- @group page structure -----------------------------------------
+----------------------------------------------------------------- */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+.header {
+    position: fixed;
+    z-index: 100;
+    padding: 0 64px 0 20px ;
+    width: 240px;
+    height: 100%;
+    background: url(../images/black_header.jpg) top left repeat;
+}  
+
+#drawer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+    transition: width 2s;
+    z-index: 200;
+    overflow: hidden;
+    background: rgba(50,50,50,0.95);
+}
+
+#drawer:hover {
+    width: 255px;
+}
+
+.header nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 64px;
+    height: 100%;
+    background: url(../images/black_nav.png) top left repeat;
+}
+
+.wrapper {
+    position: relative;
+    min-height: 1200px;
+    overflow: hidden;
+    height: 100%;
+    padding-left: 280px;
+    background: url(../images/black_bg.jpg) top left repeat;
+}
+
+.content, .footer {
+    position: relative;
+    max-width: 1500px;
+    padding: 0 340px 0 80px;
+}
+
+article {
+    margin: 40px auto;
+	background: #dad5c2 url(../images/black_post.jpg) top left repeat;
+}
+
+.jotting {
+    margin: 40px auto;
+    position: relative;
+    background: #8abcbb url(../images/black_blue.jpg) repeat;
+}
+
+#aside {
+	position: absolute;
+	top: 0;
+	right: 0;
+    width: 250px;
+    height: 100%;
+    transition: width 2s;
+    padding: 0 20px 50px 20px;
+    background: rgba(255,255,255,0.3) url(../images/black_line2.png) top left repeat-y;
+}
+
+.aside {
+    padding-top: 40px;
+}
+
+/* ----------------------------------------------------------------
+--- @group header styles ------------------------------------------
+----------------------------------------------------------------- */
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+	margin: 30px auto;
+    line-height: 1;
+}
+
+.header img{
+	width: 70%;
+}
+
+.header a {
+    color: #eee;
+	line-height: 2.5;
+}
+
+.header nav a {
+    color: #222;
+}
+
+#drawer h2 {
+    padding-top: 20px;
+    color: #777;
+    font-size: 1em;
+}
+
+#drawer ul {
+    padding: 80px;
+    text-align: left;
+}
+
+#drawer a {
+    color: #ccc;
+}
+
+/* ----------------------------------------------------------------
+--- @group content styles -----------------------------------------
+----------------------------------------------------------------- */
+
+article {
+    margin: 40px auto;
+	border-bottom: solid 1px #999;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
+	border-radius: 10px;
+    overflow: hidden;
+}
+
+article img {
+    width: 100%;
+}
+
+article h3 {
+    padding: 5px 30px 10px;
+    background: url(../images/black_line3.jpg) bottom left repeat-x;
+    font-size: 1.5em;
+}
+
+article section p {
+    padding: 0 30px;
+    line-height: 1.5;
+}
+
+article footer {
+    padding: 5px 0;
+    border-top: solid 1px #B19C78;
+}
+
+article footer li {
+    float: right;
+    font-size: 0.8em;
+    line-height: 2;
+    padding-right: 10px;
+}
+
+.jotting {
+    padding: 40px;
+    color: #333;
+	border-bottom: solid 1px #999;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+}
+
+.jotting p {
+    line-height: 1.5;
+    padding: 30px 20px;
+    background: url(../images/black_line.png);
+}
+
+.jotting h3 {
+    font-size: 1.5em;
+    text-shadow: 1px 1px 0px #F3F3F3,1px 2px 0px #B2B2B2;
+    position: absolute;
+    left: 60px;
+    top: 25px;
+}
+
+/* ----------------------------------------------------------------
+--- @group aside styles -------------------------------------------
+----------------------------------------------------------------- */
+    
+.aside {
+    font-size: 0.8em;
+    font-style: normal
+}
+
+aside li, aside p {
+    margin: 5px;
+}
+
+aside h2 {
+	color: #555;
+    padding: 1px 5px;
+	border-bottom: dashed 1px #555;
+	background: url(../images/net.png) top left repeat;
+}
+
+aside input {
+    margin: 10px 5px 0;
+    padding: 7px;
+    width: 90%;
+    color: #B3B3B3;
+    border: none;
+    border: solid 1px #979797;
+    background: #ECECEC;
+}
+
+/* ----------------------------------------------------------------
+--- @group mobile devices -----------------------------------------
+----------------------------------------------------------------- */
+
+@media screen and (max-width:1600px) {
+    .header {
+        width: 180px;
+    } 
+    .content, .footer {
+        padding: 0 330px 0 20px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    #aside {
+        right: -2000px;
+    }
+    .content, .footer {
+        padding: 0 20px 0 0;
+    }
+    article {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header {
+        width: 100%;
+        height: 100px;
+    }  
+    .header h1 {
+        margin: 0;
+        padding: 0;
+    }
+    .header a {
+        line-height: 1;
+    }
+    .header img {
+        width: 96px;
+    }
+    .header ul {
+        position: absolute; 
+        top: -3000px;
+    }
+    .wrapper {
+        padding: 90px 0 0;
+    }
+    .content, .footer {
+        padding: 0 10px;
+    }
+}
