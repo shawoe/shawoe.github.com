@@ -48,7 +48,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     left: 0;
     width: 30px;
     height: 100%;
-    transition: width 2s;
+    transition: width 1s;
     z-index: 200;
     overflow: hidden;
     background: rgba(50,50,50,0.95);
@@ -154,21 +154,43 @@ article {
 ----------------------------------------------------------------- */
 
 article {
-    margin: 40px auto;
 	border-bottom: solid 1px #999;
 	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
 	border-radius: 10px;
-    overflow: hidden;
 }
 
 article img {
+	border-radius: 10px 10px 0 0;
     width: 100%;
 }
 
+.date {
+    transform: rotate(90deg);
+    position: absolute;
+}
+
+.date p {
+    position: absolute;
+	border-radius: 5px 5px 0 0;
+    width: 140px;
+    top: 0;
+    right: 0;
+    text-align: center;
+    background: rgba(256,256,128,0.8);
+    color: #888;
+    border-top: solid 1px #ccc;
+}
+
 article h3 {
-    padding: 5px 30px 10px;
+    padding: 10px 0px 20px;
     background: url(../images/black_line3.jpg) bottom left repeat-x;
-    font-size: 1.5em;
+    font-size: 1.25em;
+}
+
+article h3 a {
+    color: #444;
+    padding-left: 30px;
+    border-left: #a00 6px solid; 
 }
 
 article section p {
@@ -177,6 +199,7 @@ article section p {
 }
 
 article footer {
+    overflow: hidden;
     padding: 5px 0;
     border-top: solid 1px #B19C78;
 }
@@ -186,6 +209,11 @@ article footer li {
     font-size: 0.8em;
     line-height: 2;
     padding-right: 10px;
+}
+
+.blank {
+    display: block;
+    margin: 0 auto;
 }
 
 .jotting {
@@ -208,6 +236,11 @@ article footer li {
     position: absolute;
     left: 60px;
     top: 25px;
+}
+
+.footer p {
+    text-align: center;
+    padding: 20px 0;
 }
 
 /* ----------------------------------------------------------------
@@ -258,7 +291,7 @@ aside input {
         right: -2000px;
     }
     .content, .footer {
-        padding: 0 20px 0 0;
+        padding: 0 30px 0 20px;
     }
     article {
         margin: 20px auto;
