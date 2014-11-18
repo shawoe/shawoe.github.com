@@ -9,25 +9,17 @@
     
 	<title>博客主页：肖艺 -- Powered by Shawoe.net</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" media="screen" />
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css" media="screen" />
 </head>
 <body class="home">		
     <header class="header">
         <div id="drawer">
             <h2>会员中心 >></h2>
-            <ul>
-                <li><a href="index.html">aaa</a></li>
-                <li><a href="#">bbb</a></li>
-                <li><a href="#">ccc</a></li>
-                <li><a href="#">ddd</a></li>
-                <li><a href="#">eee</a></li>
-                <li><a href="#">fff</a></li>
-                <li><a href="#">ggg</a></li>
-                <li><a href="#">hhh</a></li>
-                <li><a href="#">iii</a></li>
-                <li><a href="#">jjj</a></li>
-                <li><a href="#">kkk</a></li>
-            </ul>
+            <form>
+				<label for="username">用户名:<input type="text" name="username" /></label>
+				<label for="password">密码:<input type="password" name="password" /></label>
+				<label for="email">E-mail:<input type="email" name="email" /></label>
+            </form>
         </div>
         <h1><img src="images/logo.png" alt="博客主页：肖艺" /></h1>
         <ul>
@@ -37,18 +29,17 @@
             <li><a href="#">关于</a></li>
         </ul>
         <nav>
-            <ul id="menu-my" class="mynav">
-                <li id="menu-item-1167" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1167"><a class="simptip-position-right simptip-movable" data-tooltip="杂谈" href="http://zhw-island.com/category/%E6%9D%82%E8%B0%88">)</a></li>
-                <li id="menu-item-1161" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1161"><a class="simptip-position-right simptip-movable" data-tooltip="电影" href="http://zhw-island.com/category/%E7%94%B5%E5%BD%B1">_</a></li>
-                <li id="menu-item-1170" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1170"><a class="simptip-position-right simptip-movable" data-tooltip="游戏" href="http://zhw-island.com/category/%E6%B8%B8%E6%88%8F">@</a></li>
-                <li id="menu-item-1165" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1165"><a class="simptip-position-right simptip-movable" data-tooltip="喜欢" href="http://zhw-island.com/category/%E5%96%9C%E6%AC%A2">^</a></li>
-                <li id="menu-item-1162" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1162"><a class="simptip-position-right simptip-movable" data-tooltip="音乐" href="http://zhw-island.com/category/%E9%9F%B3%E4%B9%90">#</a></li>
-                <li id="menu-item-1163" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1163"><a class="simptip-position-right simptip-movable" data-tooltip="实验" href="http://zhw-island.com/category/%E5%AE%9E%E9%AA%8C">$</a></li>
-                <li id="menu-item-1164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1164"><a class="simptip-position-right simptip-movable" data-tooltip="存档" href="http://zhw-island.com/category/%E5%AD%98%E6%A1%A3">+</a></li>
-                <li id="menu-item-1166" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1166"><a class="simptip-position-right simptip-movable" data-tooltip="摄影" href="http://zhw-island.com/category/%E6%91%84%E5%BD%B1">&amp;</a></li>
-                <li id="menu-item-1168" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1168"><a class="simptip-position-right simptip-movable" data-tooltip="设计" href="http://zhw-island.com/category/%E8%AE%BE%E8%AE%A1">*</a></li>
-                <li id="menu-item-1169" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1169"><a class="simptip-position-right simptip-movable" data-tooltip="代码" href="http://zhw-island.com/category/%E4%BB%A3%E7%A0%81">(</a></li>
-            </ul>
+            <h2>站内导航</h2>
+            <ul>
+                <li><span class="icon-home icon-large"></span></li>
+                <li><span class="icon-envelope icon-large"></span></li>
+                <li><span class="icon-trophy icon-large"></span></li>
+                <li><span class="icon-cloud-download icon-large"></span></li>
+                <li><span class="icon-bar-chart icon-large"></span></li>
+                <li><span class="icon-shopping-cart icon-large"></span></li>
+                <li><span class="icon-briefcase icon-large"></span></li>
+                <li><span class="icon-camera-retro icon-large"></span></li>
+            </ul>              
         </nav>
     </header>
     
@@ -153,8 +144,11 @@
             
             <address class="aside address">
 				<h2>联系方式</h2>
-                <p>shawoe@163.com</p>
-                <p>https://github.com/shawoe</p>
+				<ul>
+					<li><span class="icon-phone-sign icon-large"></span>18366150468</li>
+					<li><span class="icon-envelope-alt icon-large"></span>shawoe@163.com</li>
+					<li><span class="icon-github-alt icon-large"></span><a href="https://github.com/shawoe">GitHub.com/Shawoe</a></li>
+				</ul>
             </address>
             
             <div class="aside search">
