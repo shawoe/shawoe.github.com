@@ -1,4 +1,4 @@
-ï»¿/* ----------------------------------------------------------------
+/* ----------------------------------------------------------------
 --- @group global reset -------------------------------------------
 ----------------------------------------------------------------- */
 
@@ -8,9 +8,13 @@
 }
 
 body {
-    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","å¾®è½¯é›…é»‘";
+    font-family: "Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei","Î¢ÈíÑÅºÚ";
     font-size: 1em;
     color: #444;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
 }
 
 ul {
@@ -22,201 +26,171 @@ a {
 }
 
 p {
-    margin: 10px 0;
+    margin: 1em 0;
 }
 
 /* ----------------------------------------------------------------
 --- @group page structure -----------------------------------------
 ----------------------------------------------------------------- */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+div.wrapper {
+    position: relative;
+    height: 100%;
+    min-height: 1200px; /*fixed*/
 }
 
-.header {
-    position: fixed;
-    z-index: 100;
-    padding: 0 64px 0 20px ;
-    width: 240px;
+header.header {
+    position: absolute;
+    position: fixed; /*IE8+*/
     height: 100%;
-    background: url(../images/black_header.jpg) top left repeat;
+    width: 240px;
+    z-index: 100;
+    padding-right: 64px;
 }  
 
-#drawer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 100%;
-    transition: width 1s;
-    z-index: 200;
-    overflow: hidden;
-    background: rgba(50,50,50,0.95);
+section.content, footer.footer {
+    position: relative;
+    padding: 5px 280px 5px 304px;
 }
 
-#drawer:hover {
-    width: 255px;
-}
-
-.header nav {
+nav.faster {
     position: absolute;
     top: 0;
     right: 0;
+    height: 100%;
     width: 64px;
-    height: 100%;
-    background: url(../images/black_nav.png) top left repeat;
 }
 
-.wrapper {
-    position: relative;
-    min-height: 1200px;
-    overflow: hidden;
-    height: 100%;
-    padding-left: 280px;
-    background: url(../images/black_bg.jpg) top left repeat;
+article, section.jotting {
+    margin: 40px 40px 40px 25px;
 }
 
-.content, .footer {
-    position: relative;
-    max-width: 1500px;
-    padding: 0 340px 0 80px;
-}
-
-article {
-    margin: 40px auto;
-	background: #dad5c2 url(../images/black_post.jpg) top left repeat;
-}
-
-.jotting {
-    margin: 40px auto;
-    position: relative;
-    background: #8abcbb url(../images/black_blue.jpg) repeat;
-}
-
-#aside {
+aside {
 	position: absolute;
 	top: 0;
 	right: 0;
-    width: 250px;
+    width: 280px;
     height: 100%;
-    transition: width 2s;
-    padding: 0 20px 50px 20px;
-    background: rgba(255,255,255,0.3) url(../images/black_line2.png) top left repeat-y;
-}
-
-.aside {
-    padding-top: 40px;
 }
 
 /* ----------------------------------------------------------------
 --- @group header styles ------------------------------------------
 ----------------------------------------------------------------- */
 
-.header {
+header.header {
     text-align: center;
+    background: url(../images/black_header.jpg) top left repeat;
 }
 
-.header h1 {
-    margin: 30px auto;
-    line-height: 1;
-}
-
-.header img {
-	width: 70%;
-	
-}
-
-.header img:hover {
+nav.primary a {
 	position: relative;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.4);
-	top: 5px;
-	left: 2px;
-}
-
-.header a {
     padding: 5px 40px;
     color: #eee;
     line-height: 2.5;
     border-radius: 2px;
 }
 
-.header a:hover {
-	position: relative;
-	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.4);
+nav.primary  a:hover {
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.4);
 	top: 1px;
 	left: 2px;
 	background: #322;
 }
 
-.header nav h2 {
+h1 {
+    margin: 30px auto;
+    line-height: 1;
+}
+
+h1 img {
+	width: 70%;
+	border: 0 none;
+}
+
+h1 img:hover {
+	position: relative;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.4);
+	top: 5px;
+	left: 2px;
+}
+
+header nav h2 {
     display: none;
 }
 
-.header nav li {
+nav.faster {
+    background: url(../images/black_nav.png) top left repeat;
+}
+
+nav.faster li {
     padding: 10px 0;
     color: #333;
 }
 
-.header nav li:hover {
+nav.faster li:hover {
     color: #200;
 }
 
-#drawer h2 {
-    padding-top: 20px;
-    color: #877;
-    font-size: 1em;
-}
-
-#drawer form {
-    padding: 60px;
-    text-align: left;
-}
-
-#drawer label {
-    display: block;
-    padding: 8px 0;
-    color: #ccc;
-}
-
-#drawer input {
-    color: #555;
-    border: solid 1px #979797;
-    width: 150px;
-    background: #555;
-}
-
-#drawer input:hover {
-    background: #999;
-}
-
 /* ----------------------------------------------------------------
---- @group content styles -----------------------------------------
+--- @group article styles -----------------------------------------
 ----------------------------------------------------------------- */
+
+div.wrapper {
+    background: url(../images/black_bg.jpg) top left repeat;
+}
 
 article {
     border-bottom: solid 1px #999;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.33);
     border-radius: 10px;
+	background: #dad5c2 url(../images/black_post.jpg) top left repeat;
 }
 
-article img {
-    border-radius: 10px 10px 0 0;
+article header {
+    position: relative;
+}
+
+article figure img {
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
-.date {
+article figure a {
+    display: none;
+    position: absolute;
+    top: 50%;
+    width: 31px;
+    height: 41px;
+    z-index: 10;
+}
+
+article figure a.arr-left {
+    left: 0;
+    background: url(../images/arr_left.png) no-repeat 0 0 ;
+    
+}
+
+article figure a.arr-right {
+    right: 0;
+    background: url(../images/arr_right.png) no-repeat 0 0 ;
+}
+
+time.date {
     transform: rotate(90deg);
     position: absolute;
+    right: 10px;
+    bottom: -65px;
 }
 
-.date p {
+time.date p {
     position: absolute;
     border-radius: 5px 5px 0 0;
     width: 140px;
-    top: 5px;
-    right: 0;
+    top: -50px;
+    right: 10px;
     text-align: center;
-    background: rgba(256,256,128,0.8);
+    background: #ff8;
+    background: rgba(256,256,128,0.8); /*IE9+*/
     color: #888;
     border-top: solid 1px #ccc;
 }
@@ -235,7 +209,8 @@ article h3 a {
 }
 
 article h3 a:hover {
-    background: rgba(250,250,200,0.5); 
+    background: #ee6; 
+    background: rgba(200,200,120,0.7); /*IE9+*/
 }
 
 article section p {
@@ -256,45 +231,48 @@ article footer li {
     padding-right: 10px;
 }
 
-.blank {
+img.blank {
     display: block;
     margin: 0 auto;
 }
 
-.jotting {
+section.jotting {
     padding: 40px;
     color: #333;
     border-bottom: solid 1px #999;
     border-radius: 5px;
     box-shadow: 0 1px 3px 0 rgba(0,0,0,0.4);
+    background: #8abcbb url(../images/black_blue.jpg) repeat;
 }
 
-.jotting p {
+section.jotting p {
     line-height: 1.9;
     padding: 30px 20px;
     background: url(../images/black_line.png);
 }
 
-.jotting h3 {
+section.jotting h3 {
     font-size: 1.5em;
     text-shadow: 1px 1px 0px #F3F3F3,1px 2px 0px #B2B2B2;
-    position: absolute;
-    left: 60px;
-    top: 30px;
 }
 
-.footer p {
+footer.footer p {
     text-align: center;
-    padding: 20px 0;
 }
 
 /* ----------------------------------------------------------------
 --- @group aside styles -------------------------------------------
 ----------------------------------------------------------------- */
     
-.aside {
+aside {
+    background: url(../images/black_line2.png) top left repeat-y;
+background-color: rgba(255,255,255,0.3); /*IE9+*/
+    padding-left: 10px;
+}    
+
+aside.aside {
     font-size: 0.875em;
-    font-style: normal
+    font-style: normal;
 }
 
 aside li {
@@ -322,7 +300,7 @@ aside h2 {
 }
 
 aside input {
-    margin: 10px 5px 0;
+    margin: 10px 5px;
     padding: 7px;
     width: 90%;
     color: #888;
@@ -338,7 +316,7 @@ aside input:hover {
 address li:hover {
     padding: 4px 5px;
     border: solid 1px #999;
-    background: #bcc;;
+    background: #bcc;
 }
 
 address span {
@@ -349,103 +327,3 @@ address span {
 --- @group mobile devices -----------------------------------------
 ----------------------------------------------------------------- */
 
-@media screen and (max-width:1600px) {
-    .header {
-        width: 180px;
-    } 
-    .content, .footer {
-        padding: 0 330px 0 20px;
-    }
-}
-
-@media screen and (max-width:1200px) {
-    #aside {
-        right: -2000px;
-    }
-    .content, .footer {
-        padding: 0 30px 0 20px;
-    }
-    article {
-        margin: 20px auto;
-    }
-}
-
-@media screen and (max-width:800px) {
-    .header {
-        width: 100%;
-        height: 105px;
-    }  
-    #drawer {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 20px;
-        height: 100px;
-        transition: width 1s;
-    }
-    #drawer:hover {
-        width: 100%;
-    }
-    #drawer h2 {
-        padding: 0;
-    }
-    #drawer form {
-        padding: 0;
-        margin: 0 auto;
-    }
-    #drawer label {
-        display: inline;
-        padding: 8px 0;
-        color: #ccc;
-    }
-    .header h1 {
-        margin: 0;
-        padding: 0;
-    }
-    .header a {
-        line-height: 1;
-    }
-    .header img {
-        width: 96px;
-    }
-    .header ul {
-        display: none;
-    }
-    .header nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 20px;
-        height: 100px;
-        transition: width 1s;
-        overflow: hidden;
-        background: rgba(80,80,80,0.95);
-    }
-    .header nav:hover {
-        width: 100%;
-    }
-    .header nav h2 {
-        display: block;
-        color: #999;
-        font-size: 1.25em;
-        padding-bottom: 20px;
-    }
-    .header nav ul {
-        display: block;
-    }
-    .header nav li {
-        display: inline;
-        font-size: 2em;
-        padding: 0 15px;
-        color: #777;
-    }
-    .header nav li:hover {
-        color: #f66;
-    }
-    .wrapper {
-        padding: 90px 0 0;
-    }
-    .content, .footer {
-        padding: 0 10px;
-    }
-}

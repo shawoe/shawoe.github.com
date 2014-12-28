@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8" />
@@ -10,26 +10,28 @@
 	<title>博客主页：肖艺 -- Powered by Shawoe.net</title>
 	<link rel="stylesheet" type="text/css" href="stylesheets/main.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css" media="screen" />
+    
+    <!--[if lt IE 9]>
+    <script src="html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
 </head>
-<body class="home">		
+<body>	
+    
+<div class="wrapper">
+
     <header class="header">
-        <div id="drawer">
-            <h2>会员中心 >></h2>
-            <form>
-				<label for="username">用户名:<input type="text" name="username" /></label>
-				<label for="password">密码:<input type="password" name="password" /></label>
-				<label for="email">E-mail:<input type="email" name="email" /></label>
-            </form>
-        </div>
-        <h1><img src="images/logo.png" alt="博客主页：肖艺" /></h1>
-        <ul>
-            <li><a href="index.html">主页</a></li>
-            <li><a href="#">留言</a></li>
-            <li><a href="#">归档</a></li>
-            <li><a href="#">关于</a></li>
-        </ul>
-        <nav>
+        <h1><a href="index.html"><img src="images/logo.png" alt="博客主页：肖艺" /></a></h1>
+        <nav class="primary">
             <h2>站内导航</h2>
+            <ul>
+                <li><a href="index.html">博客</a></li>
+                <li><a href="javascript:void(0)">仓库</a></li>
+                <li><a href="javascript:void(0)">经验</a></li>
+                <li><a href="javascript:void(0)">关于</a></li>
+            </ul>
+        </nav>
+        <nav class="faster">
+            <h2>快捷导航</h2>
             <ul>
                 <li><span class="icon-home icon-large"></span></li>
                 <li><span class="icon-envelope icon-large"></span></li>
@@ -39,145 +41,170 @@
                 <li><span class="icon-shopping-cart icon-large"></span></li>
                 <li><span class="icon-briefcase icon-large"></span></li>
                 <li><span class="icon-camera-retro icon-large"></span></li>
-            </ul>              
-        </nav>
+            </ul>         
+        </nav>     
     </header>
     
-    <div class="wrapper cleanfix">
-	
-        <div class="content">
-        
-            <article>
-                <header>
+    <section class="content">
+    
+        <article>
+            <header class="intro">
+                <figure class="marquee">
                     <img src="articles/images/teahouse.jpg" />
-                    <div class="date"><p>08-14-2014</p></div>
-                </header>
-                <section>
-                    <h3><a href="#">Teahouse 2.0</a></h3>
-                    <p>内什么，本站的主题Teahouse 2.0共享出来了，经过一段时间的慢慢修改，相对于1.0版本改进很多地方。主题纯属个人闲着根据个人喜好设计的，不是任何人都会喜欢，共享出来也纯属为了交流。假如你不幸安装了它，发现什么不好的地方或者bug存在，可以向我反馈，我会慢慢修复的，感谢支持。对于设计主题，可谓是艺术和技术的集合，Teahouse主题基本可以告一段落了，真心感谢伟大的Wordpress为我带来了很多知识，接下来我还会闲着设计其它主题。</p>
-                    <p>Teahouse已经托管在Github上。</p>
-                    <p>2014.08.14迎来重要更新，建议大家马上更新。就是主题添加了自动更新功能，从此以后不用再去github页面下载更新了。</p>
-                </section>
-                <footer>
-                    <ul class="source">
-                        <li><a href="#">作者</a></li>
-                        <li><a href="#">时间</a></li>
-                        <li><a href="#">来源</a></li>
-                    </ul>
-                    <ul class="interact">
-                        <li><a href="#">浏览</a></li>
-                        <li><a href="#">评论</a></li>
-                        <li><a href="#">喜欢</a></li>
-                    </ul>
-                </footer>
-            </article>
-            
-            <img class="blank" src="images/mento.png" />
-            
-            <article>
-                <header>
                     <img src="articles/images/gohome.jpg" />
-                    <div class="date"><p>05-07-2014</p></div>
-                </header>
-                <section>
-                    <h3><a href="#">归来，一路有你</a></h3>
-                    <p>历经十天，老赵平安归来了，有朋友叫我写一篇游记作为日后的攻略，可惜我太懒惰不想写太多，这里就简单的说说经过算了。</p>
-                    <p>和我旅行的人是小聪同志，最开始并没有很明确的说要去什么城市，都是最后一晚临时商讨出来的。首先我负责所有火车票、机票、酒店、巴士、路线规划、时间规划，但是我不善长和陌生人打交道和经费的算数，但是小聪同志却非常会说话兼打交道并且数学很强大，所以我是这样形容的，我是指南针他是算盘，一路上互补上阵。</p>
-                </section>
-                <footer>
-                    <ul class="source">
-                        <li><a href="#">作者</a></li>
-                        <li><a href="#">时间</a></li>
-                        <li><a href="#">来源</a></li>
-                    </ul>
-                    <ul class="interact">
-                        <li><a href="#">浏览</a></li>
-                        <li><a href="#">评论</a></li>
-                        <li><a href="#">喜欢</a></li>
-                    </ul>
-                </footer>
-            </article>
-            
-            <img class="blank" src="images/mento.png" />
-            
-            <section class="jotting">
-                <h3>三十岁</h3>
-                <p id="aaa">今天师傅突然和我说，假如三十岁还没嫁出去就回来找我，这话好像哪里听过，对，燕姐也是这样对我说的。</p>
+                    <img src="articles/images/drink.jpg">
+                    <div>
+                        <a class="arr-left" href="javascript:void(0)"></a>
+                        <a class="arr-right" href="javascript:void(0)"></a>
+                    </div> 
+                </figure>
+                <time class="date" datetime="2014-08-14"><p>08-14-2014</p></time>
+            </header>
+            <section>
+                <h3><a href="javascript:void(0)">Teahouse 2.0</a></h3>
+                <p>内什么，本站的主题Teahouse 2.0共享出来了，经过一段时间的慢慢修改，相对于1.0版本改进很多地方。主题纯属个人闲着根据个人喜好设计的，不是任何人都会喜欢，共享出来也纯属为了交流。假如你不幸安装了它，发现什么不好的地方或者bug存在，可以向我反馈，我会慢慢修复的，感谢支持。对于设计主题，可谓是艺术和技术的集合，Teahouse主题基本可以告一段落了，真心感谢伟大的Wordpress为我带来了很多知识，接下来我还会闲着设计其它主题。</p>
+                <p>Teahouse已经托管在Github上。</p>
+                <p>2014.08.14迎来重要更新，建议大家马上更新。就是主题添加了自动更新功能，从此以后不用再去github页面下载更新了。</p>
             </section>
+            <footer>
+                <ul class="source">
+                    <li><a href="javascript:void(0)">作者</a></li>
+                    <li><a href="javascript:void(0)">时间</a></li>
+                    <li><a href="javascript:void(0)">来源</a></li>
+                </ul>
+                <ul class="comment">
+                    <li><a href="javascript:void(0)">浏览</a></li>
+                    <li><a href="javascript:void(0)">评论</a></li>
+                    <li><a href="javascript:void(0)">喜欢</a></li>
+                </ul>
+            </footer>
+        </article>
+        
+        <img class="blank" src="images/mento.png" />
+        
+        <article>
+            <header class="intro">
+                <figure class="marquee">
+                    <img src="articles/images/teahouse.jpg" />
+                    <img src="articles/images/gohome.jpg" />
+                    <img src="articles/images/drink.jpg">
+                    <div>
+                        <a class="arr-left" href="javascript:void(0)"></a>
+                        <a class="arr-right" href="javascript:void(0)"></a>
+                    </div> 
+                </figure>
+                <time class="date" datetime="2014-08-14"><p>08-14-2014</p></time>
+            </header>
+            <section>
+                <h3><a href="javascript:void(0)">归来，一路有你</a></h3>
+                <p>历经十天，老赵平安归来了，有朋友叫我写一篇游记作为日后的攻略，可惜我太懒惰不想写太多，这里就简单的说说经过算了。</p>
+                <p>和我旅行的人是小聪同志，最开始并没有很明确的说要去什么城市，都是最后一晚临时商讨出来的。首先我负责所有火车票、机票、酒店、巴士、路线规划、时间规划，但是我不善长和陌生人打交道和经费的算数，但是小聪同志却非常会说话兼打交道并且数学很强大，所以我是这样形容的，我是指南针他是算盘，一路上互补上阵。</p>
+            </section>
+            <footer>
+                <ul class="source">
+                    <li><a href="javascript:void(0)">作者</a></li>
+                    <li><a href="javascript:void(0)">时间</a></li>
+                    <li><a href="javascript:void(0)">来源</a></li>
+                </ul>
+                <ul class="comment">
+                    <li><a href="javascript:void(0)">浏览</a></li>
+                    <li><a href="javascript:void(0)">评论</a></li>
+                    <li><a href="javascript:void(0)">喜欢</a></li>
+                </ul>
+            </footer>
+        </article>
+        
+        <img class="blank" src="images/mento.png" />
+        
+        <section class="jotting">
+            <h3>三十岁</h3>
+            <p id="aaa">今天师傅突然和我说，假如三十岁还没嫁出去就回来找我，这话好像哪里听过，对，燕姐也是这样对我说的。</p>
+        </section>
+        
+        <img class="blank" src="images/mento.png" />
+        
+        <article>
+            <header class="intro">
+                <figure class="marquee">
+                    <img src="articles/images/teahouse.jpg" />
+                    <img src="articles/images/gohome.jpg" />
+                    <img src="articles/images/drink.jpg">
+                    <div>
+                        <a class="arr-left" href="javascript:void(0)"></a>
+                        <a class="arr-right" href="javascript:void(0)"></a>
+                    </div> 
+                </figure>
+                <time class="date" datetime="2014-08-14"><p>08-14-2014</p></time>
+            </header>
+            <section>
+                <h3><a href="javascript:void(0)">关爱生命，传播负能量</a></h3>
+                <p>老赵又来传播负能量了，乐观者可绕行。说来惭愧，我一心希望改变生活，可一直被生活化，慢慢地我开始变得抑郁，抑郁于我不知道我想得到什么，这个对于我来说已经是老话题的。我老是怀疑自己是否患上抑郁症，悲观的想法是：无论外界怎么变化都改变不了我对这个世界的看法；乐观的想法是：只是这个世界还没变化出我的期待。还有一点就是我老是在回忆，放不下过去，或者说放不下昨天，导致我每次迎接新的一天的时候都会想到明天我要怎么放下今天。或许我只是需要一个新开始，所以很多抑郁症的人选择了轻生，我越来越理解这种做法。当然，我还没到这种地步，起码今天还没到，否则我就不会在这写文章，换种说法是我必须对生活抱有期待，假如真的没有了期待的话，我将彻底沦为不治，走向灭亡。</p>
+                <p>推荐朴树的《平凡之路》</p>
+            </section>
+            <footer>
+                <ul class="source">
+                    <li><a href="javascript:void(0)">作者</a></li>
+                    <li><a href="javascript:void(0)">时间</a></li>
+                    <li><a href="javascript:void(0)">来源</a></li>
+                </ul>
+                <ul class="comment">
+                    <li><a href="javascript:void(0)">浏览</a></li>
+                    <li><a href="javascript:void(0)">评论</a></li>
+                    <li><a href="javascript:void(0)">喜欢</a></li>
+                </ul>
+            </footer>
+        </article>
+        
+        <img class="blank" src="images/mento.png" />
             
-            <img class="blank" src="images/mento.png" />
-            
-            <article>
-                <header>
-                    <img src="articles/images/drink.jpg" />
-                    <div class="date"><p>12-30-2013</p></div>
-                </header>
-                <section>
-                    <h3><a href="#">关爱生命，传播负能量</a></h3>
-                    <p>老赵又来传播负能量了，乐观者可绕行。说来惭愧，我一心希望改变生活，可一直被生活化，慢慢地我开始变得抑郁，抑郁于我不知道我想得到什么，这个对于我来说已经是老话题的。我老是怀疑自己是否患上抑郁症，悲观的想法是：无论外界怎么变化都改变不了我对这个世界的看法；乐观的想法是：只是这个世界还没变化出我的期待。还有一点就是我老是在回忆，放不下过去，或者说放不下昨天，导致我每次迎接新的一天的时候都会想到明天我要怎么放下今天。或许我只是需要一个新开始，所以很多抑郁症的人选择了轻生，我越来越理解这种做法。当然，我还没到这种地步，起码今天还没到，否则我就不会在这写文章，换种说法是我必须对生活抱有期待，假如真的没有了期待的话，我将彻底沦为不治，走向灭亡。</p>
-                    <p>推荐朴树的《平凡之路》</p>
-                </section>
-                <footer>
-                    <ul class="source">
-                        <li><a href="#">作者</a></li>
-                        <li><a href="#">时间</a></li>
-                        <li><a href="#">来源</a></li>
-                    </ul>
-                    <ul class="interact">
-                        <li><a href="#">浏览</a></li>
-                        <li><a href="#">评论</a></li>
-                        <li><a href="#">喜欢</a></li>
-                    </ul>
-                </footer>
-            </article>
-            
-            <img class="blank" src="images/mento.png" />
-            
+    </section>
+    
+    <aside class="aside">
+    
+        <section class="aside resume">
+            <h2>老肖！何许人？</h2>
+            <p>Hi，老肖其实不老，只是个九零后文艺青年，也是一名Java工程师，也是手机App设计师，也是Web前端设计师，爱互联网，爱美术，爱游戏，爱电影，爱音乐，爱御姐...</p>
+        </section>
+        
+        <address class="aside address">
+            <h2>联系方式</h2>
+            <ul>
+                <li><span class="icon-phone-sign icon-large"></span>18366150468</li>
+                <li><span class="icon-envelope-alt icon-large"></span>shawoe@163.com</li>
+                <li><span class="icon-github-alt icon-large"></span><a href="https://github.com/shawoe">GitHub.com/Shawoe</a></li>
+            </ul>
+        </address>
+        
+        <div class="aside search">
+            <h2>全站搜索</h2>
+            <input type="text" value="Hi，你想搜什么？" />
         </div>
         
-        <aside id="aside">
+        <nav class="aside document">
+            <h2>文章归档</h2>
+            <ul>
+                <li><a href="javascript:void(0)">a</a></li>
+                <li><a href="javascript:void(0)">b</a></li>
+                <li><a href="javascript:void(0)">c</a></li>
+                <li><a href="javascript:void(0)">d</a></li>
+                <li><a href="javascript:void(0)">e</a></li>
+                <li><a href="javascript:void(0)">f</a></li>
+                <li><a href="javascript:void(0)">g</a></li>
+                <li><a href="javascript:void(0)">h</a></li>
+                <li><a href="javascript:void(0)">i</a></li>
+                <li><a href="javascript:void(0)">j</a></li>
+                <li><a href="javascript:void(0)">k</a></li>
+            </ul>
+        </nav>
         
-            <div class="aside resume">
-				<h2>老肖！何许人？</h2>
-                <p>Hi，老肖其实不老，只是个九零后文艺青年，也是一名Java工程师，也是手机App设计师，也是Web前端设计师，爱互联网，爱美术，爱游戏，爱电影，爱音乐，爱御姐...</p>
-            </div>
-            
-            <address class="aside address">
-				<h2>联系方式</h2>
-				<ul>
-					<li><span class="icon-phone-sign icon-large"></span>18366150468</li>
-					<li><span class="icon-envelope-alt icon-large"></span>shawoe@163.com</li>
-					<li><span class="icon-github-alt icon-large"></span><a href="https://github.com/shawoe">GitHub.com/Shawoe</a></li>
-				</ul>
-            </address>
-            
-            <div class="aside search">
-				<h2>全站搜索</h2>
-                <input type="text" value="Hi，你想搜什么？" />
-            </div>
-            
-            <nav class="aside nav">
-				<h2>文章归档</h2>
-                <ul>
-                    <li><a href="#">a</a></li>
-                    <li><a href="#">b</a></li>
-                    <li><a href="#">c</a></li>
-                    <li><a href="#">d</a></li>
-                    <li><a href="#">e</a></li>
-                    <li><a href="#">f</a></li>
-                    <li><a href="#">g</a></li>
-                    <li><a href="#">h</a></li>
-                    <li><a href="#">i</a></li>
-                    <li><a href="#">j</a></li>
-                    <li><a href="#">k</a></li>
-                </ul>
-            </nav>
-            
-        </aside>
+    </aside>
         
-        <footer class="footer">
-            <p>© 2014 GITHUB 博客-肖艺 | RESPONSIVE WEB DESIGNER | POWERED BY SHAWOE.NET</p>
-        </footer>
-    </div>
+    <footer class="footer">
+        <p>© 2014 GITHUB 博客-肖艺 | RESPONSIVE WEB DESIGNER | POWERED BY SHAWOE.NET</p>
+    </footer>
+    
+</div>
+    
+<script src="scripts/main.js"></script>
 </body>
 </html>
