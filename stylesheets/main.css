@@ -175,6 +175,26 @@ article figure a.arr-right {
     background: url(../images/arr_right.png) no-repeat 0 0 ;
 }
 
+article figure span {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    border-radius: 20px;
+    background: rgba(100,100,100,0.3);
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    margin: 0 2px;
+    cursor: pointer;
+}
+
+article figure div.num {
+    display: none;
+    position: absolute;
+    right: 10%;
+    bottom: 5%;
+}
+
 time.date {
     transform: rotate(90deg);
     position: absolute;
@@ -266,7 +286,7 @@ footer.footer p {
     
 aside {
     background: url(../images/black_line2.png) top left repeat-y;
-background-color: rgba(255,255,255,0.3); /*IE9+*/
+    background-color: rgba(255,255,255,0.3); /*IE9+*/
     padding-left: 10px;
 }    
 
@@ -327,3 +347,11 @@ address span {
 --- @group mobile devices -----------------------------------------
 ----------------------------------------------------------------- */
 
+@media screen and (max-width: 1200px) {
+    aside {
+        display: none;
+    }  
+    section.content, footer.footer {
+        padding: 5px 0px 5px 304px;
+    }
+}

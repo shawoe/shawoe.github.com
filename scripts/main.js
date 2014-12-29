@@ -12,11 +12,31 @@ function addLoadEvent(func) {
     }
 }
 
+function getClassElems(clazz, node) {
+    if (!node) {
+        node = document;
+    }        
+    if (node.getElementsByClassName) {
+        return node.getElementsByClassName(clazz);
+    } else {
+        var results = new Array();
+        var elems = node.getElementsByTagName('*');
+        for (var i = 0; i < elems.length; i++) {
+            if (elems[i].className.indexOf(clazz) != -1) {
+                results[results.length] = elems[i];
+            }
+        }
+        return results;
+    }
+}
+
 function marquee() {
-    var figure = document.getElementsByClassName('marquee');
+    var figure = getClassElems('marquee');
     var img = figure[0].getElementsByTagName('IMG'); 
-    var arrLeft = document.getElementsByClassName('arr-left');
-    var arrRight = document.getElementsByClassName('arr-right');
+    var numDiv = getClassElems('num'); 
+    var num = numDiv[0].getElementsByTagName('SPAN'); 
+    var arrLeft = getClassElems('arr-left');
+    var arrRight = getClassElems('arr-right');
     var index = visited = 0;
     var autoShow = null;
     
@@ -24,9 +44,11 @@ function marquee() {
     autoShowStart();
     
     function initEvent() {
-        figure[0].style.height = "700px";
+        figure[0].style.height = img[0].offsetHeight + "px";
         figure[0].style.overflow = "hidden";
         figure[0].style.position = "relative";
+        numDiv[0].style.display = "block";
+        num[0].style.background = "rgba(256,20,20,0.5)";
         for (var i = 0; i<img.length; i++) {
             img[i].style.position = "absolute";
             if (i===0) {
@@ -45,9 +67,22 @@ function marquee() {
             arrLeft[0].style.display = "none";
             arrRight[0].style.display = "none";
         }
-        for(var j = 0; j < arrLeft.length; j++) {
+        for (var j = 0; j < figure.length; j++) {
             arrLeft[j].onclick = movePicLast;
             arrRight[j].onclick = movePicNext;
+        }
+        for (var k = 0; k < num.length; k++) {
+            num[k].onclick = selectPic;
+        }
+    }
+    
+    function selectPic() {
+        var selected = parseInt(this.innerText) - 1;
+        while (selected > index) {
+            movePicNext();
+        }
+        while (selected < index) {
+            movePicLast();
         }
     }
     
@@ -58,6 +93,8 @@ function marquee() {
         }
         moveLeftOut(img[index],1000);
         moveRightIn(img[next],1000);
+        num[index].style.background = "rgba(100,100,100,0.3)";
+        num[next].style.background = "rgba(256,20,20,0.5)";
         index = next;
     }
     
@@ -67,9 +104,10 @@ function marquee() {
             last = img.length - 1;
         }
         img[last].style.left = "-100%";
-        alert
         moveLeftIn(img[last],1000);
         moveRightOut(img[index],1000);
+        num[index].style.background = "rgba(100,100,100,0.3)";
+        num[last].style.background = "rgba(256,20,20,0.5)";
         index = last;
     }
     
@@ -101,14 +139,17 @@ function marquee() {
     
     function move(elem,speed,direction,baundary,end) {
         var elem_x = parseInt(elem.style.left);
-        var move = setInterval(function(){
+        if (elem.move) {
+            clearInterval(elem.move);
+        }
+        elem.move = setInterval(function(){
             if (direction === "right") {
                 elem_x += speed/200;
                 elem.style.left = elem_x + "%";
                 if (elem_x > baundary) {
                     elem_x = end;
                     elem.style.left = elem_x + "%";
-                    clearInterval(move);
+                    clearInterval(elem.move);
                 }
             } else {
                 elem_x -= speed/200;
@@ -116,7 +157,7 @@ function marquee() {
                 if (elem_x < baundary) {
                     elem_x = end;
                     elem.style.left = elem_x + "%";
-                    clearInterval(move);
+                    clearInterval(elem.move);
                 }
             }
         },1);
