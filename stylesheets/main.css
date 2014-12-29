@@ -348,10 +348,14 @@ address span {
 ----------------------------------------------------------------- */
 
 @media screen and (max-width: 1200px) {
+    
+    header.header {
+        width: 120px;
+    }  
     aside {
         display: none;
     }  
     section.content, footer.footer {
-        padding: 5px 0px 5px 304px;
+        padding: 5px 0px 5px 180px;
     }
 }
