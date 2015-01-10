@@ -34,7 +34,7 @@ function marquee() {
     var figure = getClassElems('marquee');
     var img = figure[0].getElementsByTagName('IMG'); 
     var numDiv = getClassElems('num'); 
-    var num = numDiv[0].getElementsByTagName('SPAN'); 
+    var num = numDiv[0].getElementsByTagName('A'); 
     var arrLeft = getClassElems('arr-left');
     var arrRight = getClassElems('arr-right');
     var index = visited = 0;
@@ -48,7 +48,7 @@ function marquee() {
         figure[0].style.overflow = "hidden";
         figure[0].style.position = "relative";
         numDiv[0].style.display = "block";
-        num[0].style.background = "rgba(256,20,20,0.5)";
+        num[0].setAttribute("class","selected");
         for (var i = 0; i<img.length; i++) {
             img[i].style.position = "absolute";
             if (i===0) {
@@ -72,12 +72,12 @@ function marquee() {
             arrRight[j].onclick = movePicNext;
         }
         for (var k = 0; k < num.length; k++) {
-            num[k].onclick = selectPic;
+            num[k].onmouseover = selectPic;
         }
     }
     
     function selectPic() {
-        var selected = parseInt(this.innerText) - 1;
+        var selected = parseInt(this.innerHTML) - 1;
         while (selected > index) {
             movePicNext();
         }
@@ -93,8 +93,8 @@ function marquee() {
         }
         moveLeftOut(img[index],1000);
         moveRightIn(img[next],1000);
-        num[index].style.background = "rgba(100,100,100,0.3)";
-        num[next].style.background = "rgba(256,20,20,0.5)";
+        num[index].setAttribute("class","");
+        num[next].setAttribute("class","selected");
         index = next;
     }
     
@@ -106,8 +106,8 @@ function marquee() {
         img[last].style.left = "-100%";
         moveLeftIn(img[last],1000);
         moveRightOut(img[index],1000);
-        num[index].style.background = "rgba(100,100,100,0.3)";
-        num[last].style.background = "rgba(256,20,20,0.5)";
+        num[index].setAttribute("class","");
+        num[last].setAttribute("class","selected");
         index = last;
     }
     

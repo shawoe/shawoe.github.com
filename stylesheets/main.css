@@ -175,17 +175,25 @@ article figure a.arr-right {
     background: url(../images/arr_right.png) no-repeat 0 0 ;
 }
 
-article figure span {
+article figure div.num a {
+    position: relative;
     display: inline-block;
     height: 30px;
     width: 30px;
     border-radius: 20px;
-    background: rgba(100,100,100,0.3);
+    background: #555;
+    background: rgba(100,100,100,0.3); /* IE9+ */
     color: #fff;
     text-align: center;
     line-height: 30px;
     margin: 0 2px;
     cursor: pointer;
+    z-index: 20;
+}
+
+article figure div.num a.selected {
+    background: #b22;
+    background: rgba(256,20,20,0.5); /* IE9+ */
 }
 
 article figure div.num {
